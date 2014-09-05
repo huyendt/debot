@@ -14,7 +14,8 @@
 		</div>
 		<div id="columns">
 			<div id="side">
-
+				
+				
 				<a href="http://www....">Home</a>
 				<br />
 				<a href="http://www..../faq">Questions</a>
@@ -25,19 +26,13 @@
 				<
 				<br />
 				<br/>
-				<!--
-				<div id="cart"
+				<% if @cart %>
+
+				<div id="cart">
 					<%= render @cart %>
 				</div>
-			-->		
-				<% if @cart %>		
-					
-					<div id="cart">
-					<%= render @cart %>
-					</div>	
-					
+
 				<% end %>
-			</div>
 		</div>
 		<div id="main">
 			<%= yield %>
