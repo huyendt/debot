@@ -1,0 +1,106 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:flash
+vi:
+
+#END:cart
+#END:checkout
+#END:flash
+#END:main
+#END:layout
+  number:
+    currency:
+      format:
+        unit:      "VND"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%n%u"
+#END:currency
+
+#START:layout
+  layouts:
+    application:
+      title:       "Do's Bookshelf"
+      home:        "Trang chủ"
+      questions:   "Câu hỏi"
+      news:        "Tin tức"
+      contact:     "Liên hệ"
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title:       "Giỏ hàng của bạn"
+      empty:       "Xóa giỏ hàng"
+      checkout:    "Thanh toán"
+#END:cart
+
+#START:main
+  store:
+    index:
+      title_html:  "Danh mục sách"
+      add_html:    "Thêm vào giỏ hàng"     
+#END:main
+
+#START:checkout
+  orders:
+    new:
+      legend:       "Xin vui lòng điền thông tin chi tiết"      
+    form:
+      name:         "Tên"
+      address:      "Địa chỉ"
+      email:        "E-mail"
+      pay_type:     "Loại thanh toán"
+      pay_prompt:   "Lựa chọn phương thức thanh toán"
+      submit:       "Đặt hàng"
+#END:checkout
+
+#START:flash
+  thanks:          "Cảm ơn bạn đã đặt hàng"
+#END:flash
+
+#START:model
+#START:errors
+  activerecord:
+    errors:
+      messages:
+        inclusion: "không thuộc danh sách"
+        blank:     "không được để trống"
+#END:errors
+    models:
+      order: "đặt hàng"       
+#END:model
+#START:errors
+    
+  errors:
+    template:
+      body:        "Danh sách lỗi:"
+      header:
+        one:       "1 lỗi xảy ra khi %{model} "
+        other:     "%{count} lỗi xảy ra khi %{model} "
+#END:errors

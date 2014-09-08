@@ -1,6 +1,6 @@
 <% unless cart.line_items.empty? %>
 <div class="cart_title">
-	Your Cart
+	<%= t('.title') %>
 </div>
 <table>
 	<%= render(cart.line_items) %>
@@ -9,7 +9,7 @@
 		<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
 	</tr>
 </table>
-<%= button_to "Checkout" , new_order_url, :method=>:get %>
-<%= button_to 'Empty cart', cart, :method => :delete, :confirm => 'Are you sure?' %>
+<%= button_to t('.checkout') , new_order_url, :method=>:get %>
+<%= button_to t('.empty'), cart, :method => :delete, :confirm => 'Are you sure?' %>
 <%end%>
 
